@@ -30,7 +30,7 @@ export default function Contact() {
         <div className="email-link-section">
           <div className="email-link">
             <a href="mailto:kontakt@caroline-spahni.ch" className="email-icon">
-              <img src="/images/email-icon.png" alt="E-Mail Icon" />
+              <img src={`${import.meta.env.BASE_URL}images/email-icon.png`} alt="E-Mail Icon" />
             </a>
             <p className="email-text">Klicken Sie auf das Icon, um mir eine E-Mail zu schreiben.</p>
           </div>
