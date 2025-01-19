@@ -44,16 +44,16 @@ function App() {
             </p>
             <div className="social-icons">
               <a href="https://m.me/profile.php?id=100089598372380" className="social-icon">
-                <img src="/public/images/facebook.png" alt="Facebook" />
+                <img src={`${import.meta.env.BASE_URL}images/facebook.png`} alt="Facebook" />
               </a>
               <a href="https://www.instagram.com/caro.spahni/" className="social-icon">
-                <img src="/public/images/instagram.png" alt="Instagram" />
+                <img src={`${import.meta.env.BASE_URL}images/instagram.png`} alt="Instagram" />
               </a>
               <a href="https://threema.id/26N5RYPJ?text=Hallo Caro." className="social-icon">
-                <img src="/images/threema.png" alt="Threema" />
+                <img src={`${import.meta.env.BASE_URL}images/threema.png`} alt="Threema" />
               </a>
               <a href="mailto:kontakt@caroline-spahni.ch" className="social-icon">
-                <img src="/images/email-icon.png" alt="E-Mail" style={{ width: '40px', height: '32px' }} /> {/* Adjusted for rectangular shape */}
+                <img src={`${import.meta.env.BASE_URL}images/email-icon.png`} alt="E-Mail" style={{ width: '40px', height: '32px' }} /> {/* Adjusted for rectangular shape */}
               </a>
             </div>
           </div>
