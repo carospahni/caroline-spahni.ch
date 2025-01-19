@@ -1,0 +1,127 @@
+:root {
+  --primary-color: #b01678;
+  --secondary-color: #6c5b7b;
+  --background-color: #f8f8f8;
+  --text-color: #333;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero {
+  position: relative;
+  height: 400px;
+  background: url('/images/hero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hero-content {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  color: var(--primary-color);
+}
+
+.content-section {
+  padding: 2rem 0;
+}
+
+.single-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.section-title {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.references-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reference-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+}
+
+.reference-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.reference-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.reference-item ul {
+  margin: 0.5rem 0 0 1.5rem;
+  padding: 0;
+}
+
+.reference-item li {
+  margin-bottom: 0.25rem;
+}
+
+.reference-item a {
+  color: #0000EE;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.reference-item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
