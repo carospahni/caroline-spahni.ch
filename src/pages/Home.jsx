@@ -9,6 +9,7 @@ export default function Home() {
           <h1>Caro's Hundeservice – Professionelle Betreuung für Ihren Hund</h1>
         </div>
       </section>
+
       <section className="content-section">
         <div className="container">
           <div className="single-column">
