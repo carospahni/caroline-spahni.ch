@@ -49,16 +49,16 @@ function App() {
             </p>
             <div className="social-icons">
               <a href="https://m.me/profile.php?id=100089598372380" className="social-icon">
-                <img src={`/images/facebook.png`} alt="Facebook" />
+                <img src={`./images/facebook.png`} alt="Facebook" />
               </a>
               <a href="https://www.instagram.com/caro.spahni/" className="social-icon">
-                <img src={`/images/instagram.png`} alt="Instagram" />
+                <img src={`/caroline-spahni.ch/images/instagram.png`} alt="Instagram" />
               </a>
               <a href="https://threema.id/26N5RYPJ?text=Hallo Caro." className="social-icon">
-                <img src={`/images/threema.png`} alt="Threema" />
+                <img src={`/caroline-spahni.ch/images/threema.png`} alt="Threema" />
               </a>
               <a href="mailto:kontakt@caroline-spahni.ch" className="social-icon">
-                <img src={`/images/email-icon.png`} alt="E-Mail" style={{ width: '40px', height: '32px' }} />
+                <img src={`/caroline-spahni.ch/images/email-icon.png`} alt="E-Mail" style={{ width: '40px', height: '32px' }} />
               </a>
             </div>
           </div>
