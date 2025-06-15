@@ -8,14 +8,14 @@ const serviceDetails = {
     description: 'Der Aufbaukurs richtet sich an Teams, die bereits Grundgehorsam haben und ins Agility einsteigen wollen.',
     content: [
       'Beginnt 08. August 2025 18-19 Uhr',
-			'Kursdauer: 10 Trainings',
+      'Kursdauer: 10 Trainings',
       'Gruppengrösse: 4-5 Teams',
       'Voraussetzung: Hund mind. 10 Monate alt. Max 30kg.',
       'Inhalte: Geräteaufbau sowie Handling-Techniken',
       'Kosten: CHF 350.-',
-			'Anmeldung per E-Mail'
+      'Anmeldung per E-Mail'
     ],
-    image: '/images/agility_aufbau-jpg'
+    image: `${import.meta.env.BASE_URL}images/agility_aufbau.jpg`
   },
   trainings: {
     title: 'Agility Trainings',
@@ -25,10 +25,10 @@ const serviceDetails = {
       'Jeden Freitag; Zeit nach Absprache',
       'Gruppen à 4-5 Teams',
       'Einzeltraining: CHF 60.- pro Stunde',
-			'Gruppentraining: CHF 35.- pro Stunde',
-			'Anmeldung per E-Mail'
+      'Gruppentraining: CHF 35.- pro Stunde',
+      'Anmeldung per E-Mail'
     ],
-    image: '/images/agility_training.jpg'
+    image: `${import.meta.env.BASE_URL}images/agility_training.jpg`
   },
   hallenmiete: {
     title: 'Hallenmiete',
@@ -39,9 +39,9 @@ const serviceDetails = {
       'Stundenweise oder Halstundenweise möglich',
       'Preis Morgen: CHF 35.- pro Stunde',
       'Preis Nachmittag: CHF 45.- pro Stunde',
-			'Preis Abend: CHF 60.- pro Stunde'
+      'Preis Abend: CHF 60.- pro Stunde'
     ],
-		image: '/images/halle.jpg'
+    image: `${import.meta.env.BASE_URL}images/halle.jpg`
   },
 };
 
@@ -63,7 +63,14 @@ export default function AgilityDetail() {
         
         <div className="service-detail-content">
           <div className="service-image">
-            <img src={service.image} alt={service.title} />
+            <img 
+              src={service.image} 
+              alt={service.title}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = `${import.meta.env.BASE_URL}images/placeholder.jpg`;
+              }}
+            />
           </div>
           
           <div className="service-info">
