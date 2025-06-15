@@ -55,7 +55,7 @@ function App() {
                 <img src={`/images/instagram.png`} alt="Instagram" />
               </a>
               <a href="https://threema.id/26N5RYPJ?text=Hallo Caro." className="social-icon">
-                <img src={`/images/threema.png`} alt="Threema" />
+                <img src={`/caroline-spahni.ch/images/threema.png`} alt="Threema" />
               </a>
               <a href="mailto:kontakt@caroline-spahni.ch" className="social-icon">
                 <img src={`/images/email-icon.png`} alt="E-Mail" style={{ width: '40px', height: '32px' }} />
