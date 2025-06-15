@@ -6,6 +6,8 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import ServiceDetail from './pages/ServiceDetail';
 import Partners from './pages/Partners';
+import Agility from './pages/Agility';
+import AgilityDetail from './pages/AgilityDetail';
 import './App.css';
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
             </div>
             <div className="center">
               <NavLink to="/dienstleistungen" className="nav-link">Dienstleistungen</NavLink>
+              <NavLink to="/agility" className="nav-link">Agility</NavLink>
               <NavLink to="/preisliste" className="nav-link">Preisliste</NavLink>
               <NavLink to="/partner" className="nav-link">Partner</NavLink>
               <NavLink to="/kontakt" className="nav-link">Kontakt</NavLink>
@@ -31,6 +34,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/dienstleistungen" element={<Services />} />
         <Route path="/dienstleistungen/:id" element={<ServiceDetail />} />
+        <Route path="/agility" element={<Agility />} />
+        <Route path="/agility/:id" element={<AgilityDetail />} />
         <Route path="/preisliste" element={<Pricing />} />
         <Route path="/partner" element={<Partners />} />
         <Route path="/kontakt" element={<Contact />} />
@@ -53,7 +58,7 @@ function App() {
                 <img src={`${import.meta.env.BASE_URL}images/threema.png`} alt="Threema" />
               </a>
               <a href="mailto:kontakt@caroline-spahni.ch" className="social-icon">
-                <img src={`${import.meta.env.BASE_URL}images/email-icon.png`} alt="E-Mail" style={{ width: '40px', height: '32px' }} /> {/* Adjusted for rectangular shape */}
+                <img src={`${import.meta.env.BASE_URL}images/email-icon.png`} alt="E-Mail" style={{ width: '40px', height: '32px' }} />
               </a>
             </div>
           </div>

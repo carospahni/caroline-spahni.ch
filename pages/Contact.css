@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #b01678;
+  --secondary-color: #6c5b7b;
+  --background-color: #f8f8f8;
+  --text-color: #333;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Section 1: Contact Information */
+.contact-info-section {
+  padding: 2rem 0;
+  /* Transparent background */
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.contact-address {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 0;
+}
+
+/* Divider */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 2rem auto;
+  width: 80%;
+}
+
+/* Section 2: Contact Text */
+.contact-text-section {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.contact-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section 3: Email Link */
+.email-link-section {
+  padding: 2rem 0;
+  /* Transparent background */
+}
+
+.email-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.email-icon img {
+  width: 64px; /* Adjust width for rectangular shape */
+  height: 48px; /* Adjust height for rectangular shape */
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.email-icon:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.email-text {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-name {
+    font-size: 1.3rem;
+  }
+
+  .contact-address {
+    font-size: 1rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+
+  .email-icon img {
+    width: 56px; /* Adjust for smaller screens */
+    height: 42px; /* Adjust for smaller screens */
+  }
+
+  .email-text {
+    font-size: 0.9rem;
+  }
+}
