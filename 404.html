@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title>Weiterleiten...</title>
     <script>
-      // Handle all 404 redirects to hash-based routing
+      // Handle all 404 redirects to index.html for client-side routing
       const path = window.location.pathname;
-      const hashPath = path.startsWith('/') ? path.substring(1) : path;
-      window.location.href = `/#/${hashPath}${window.location.search}${window.location.hash}`;
+      const search = window.location.search;
+      const hash = window.location.hash;
+      window.location.href = `/#${path}${search}${hash}`;
     </script>
   </head>
   <body>
