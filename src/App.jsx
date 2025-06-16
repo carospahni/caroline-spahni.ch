@@ -1,5 +1,6 @@
 import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
@@ -11,6 +12,14 @@ import AgilityDetail from './pages/AgilityDetail';
 import './App.css';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Ensure hash is properly set when navigating
+    if (!window.location.hash &amp;&amp; location.pathname !== '/') {
+      window.location.hash = `#${location.pathname}`;
+    }
+  }, [location]);
   return (
     <div className="app">
       <nav className="navbar">
