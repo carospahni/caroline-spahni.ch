@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, NavLink, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Services from './pages/Services';
@@ -15,11 +14,19 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    // Ensure hash is properly set when navigating
-    if (!window.location.hash &amp;&amp; location.pathname !== '/') {
-      window.location.hash = `#${location.pathname}`;
+    // Handle hash routing for GitHub Pages compatibility
+    if (!window.location.hash && location.pathname !== '/') {
+      // Store the original path before converting to hash
+      sessionStorage.setItem('originalPath', location.pathname);
+      window.location.hash = location.pathname;
     }
+
+    // Clean up sessionStorage when leaving the app
+    return () => {
+      sessionStorage.removeItem('originalPath');
+    };
   }, [location]);
+
   return (
     <div className="app">
       <nav className="navbar">
@@ -49,6 +56,7 @@ function App() {
         <Route path="/partner" element={<Partners />} />
         <Route path="/kontakt" element={<Contact />} />
       </Routes>
+
       <footer className="footer">
         <div className="container">
           <div className="footer-content">
@@ -56,14 +64,14 @@ function App() {
               Folgen Sie mir auf Social Media oder kontaktieren Sie mich direkt – ich freue mich darauf, von Ihnen zu hören!
             </p>
             <div className="social-icons">
-              <a href="https://m.me/profile.php?id=100089598372380" className="social-icon">
-                <img src={`/images/facebook-icon.png`} alt="Facebook" />
+              <a href="https://m.me/profile.php?id=100089598372380" className="social-icon" target="_blank" rel="noopener noreferrer">
+                <img src="/images/facebook-icon.png" alt="Facebook" />
               </a>
-              <a href="https://www.instagram.com/caro.spahni/" className="social-icon">
-                <img src={`/images/instagram-icon.png`} alt="Instagram" />
+              <a href="https://www.instagram.com/caro.spahni/" className="social-icon" target="_blank" rel="noopener noreferrer">
+                <img src="/images/instagram-icon.png" alt="Instagram" />
               </a>
-              <a href="https://threema.id/26N5RYPJ?text=Hallo Caro." className="social-icon">
-                <img src={`/images/threema-icon.png`} alt="Threema" />
+              <a href="https://threema.id/26N5RYPJ?text=Hallo%20Caro." className="social-icon" target="_blank" rel="noopener noreferrer">
+                <img src="/images/threema-icon.png" alt="Threema" />
               </a>
               <a href="mailto:kontakt@caroline-spahni.ch" className="social-icon">
                 <img src="/images/email-icon.png" alt="E-Mail" style={{ width: '40px', height: '32px' }} />
