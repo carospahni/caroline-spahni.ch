@@ -10,16 +10,16 @@ const services = [
 
 export default function Agility() {
   return (
-    <section className="services-section">
+    <section className="agility-section">
       <div className="container">
-        <div className="services-hero">
-          <div className="services-overlay">
-            <p className="services-hero-text">
+        <div className="agility-hero">
+          <div className="agility-overlay">
+            <p className="agility-hero-text">
               Egal ob Beginner oder Profi, die Trainings sind genau auf den Ausbildungsstand der Teams ausgerichtet. Immer Freitags.
             </p>
           </div>
         </div>
-        <div className="services-grid">
+        <div className="agility-grid">
           {services.map(service => (
             <div className="service-card" key={service.id}>
               <h2>{service.title}</h2>

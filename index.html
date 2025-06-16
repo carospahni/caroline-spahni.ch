@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Caro's Hundeservice</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <base href="/" />
+    <script>
+      // Handle 404 redirects from GitHub Pages
+      if (window.location.pathname.startsWith('/404.html')) {
+        const originalPath = sessionStorage.getItem('redirect');
+        if (originalPath) {
+          window.location.href = `/#${originalPath}`;
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Hash route handler -->
+    <script>
+      // Convert hash routes to clean paths after React loads
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.location.hash) {
+          const path = window.location.hash.substring(1);
+          sessionStorage.setItem('redirect', path);
+          
+          // Only replace state if it's a valid route
+          if (!path.startsWith('/404')) {
+            window.history.replaceState(null, '', path);
+          }
+        }
+      });
+    </script>
   </body>
 </html>
