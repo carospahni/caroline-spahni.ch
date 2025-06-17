@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<<<<<<< HEAD
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
@@ -10,21 +9,6 @@
       window.location.href = '/#' + path;
     } else {
       window.location.href = '/#/';
-=======
-  <title>Redirecting...</title>
-  <script>
-    // Capture the full path
-    const path = window.location.pathname + window.location.search;
-    
-    // Only redirect if not already on hash route
-    if (!window.location.hash && path !== '/') {
-      // Preserve query parameters if they exist
-      const redirectTo = '/#' + path;
-      window.location.replace(redirectTo);
-    } else {
-      // Fallback to home if already on hash route or root
-      window.location.replace('/#/');
->>>>>>> 2cc40f501ed9b722dab6f7d272569619c807a9d8
     }
   </script>
 </head>
