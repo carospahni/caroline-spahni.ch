@@ -15,7 +15,7 @@ const serviceDetails = {
       'Kosten: CHF 350.-',
       'Anmeldung per E-Mail'
     ],
-    image: './images/agility_aufbau.jpg'
+    image: '/images/agility_aufbau.jpg'
   },
   trainings: {
     title: 'Agility Trainings',
@@ -28,7 +28,7 @@ const serviceDetails = {
       'Gruppentraining: CHF 35.- pro Stunde',
       'Anmeldung per E-Mail'
     ],
-    image: './images/agility_training.jpg'
+    image: '/images/agility_training.jpg'
   },
   hallenmiete: {
     title: 'Hallenmiete',
@@ -41,7 +41,7 @@ const serviceDetails = {
       'Preis Nachmittag: CHF 45.- pro Stunde',
       'Preis Abend: CHF 60.- pro Stunde'
     ],
-    image: './images/halle.jpg'
+    image: '/images/halle.jpg'
   },
 };
 

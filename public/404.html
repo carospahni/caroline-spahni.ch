@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Redirecting...</title>
-  <script>
-    const path = window.location.pathname;
-    if (path && path !== '/') {
-      window.location.href = '/#' + path;
-    } else {
-      window.location.href = '/#/';
-    }
-  </script>
-</head>
-<body>
-  <p>Redirecting to the correct page...</p>
-</body>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <title>Weiterleiten...</title>
+    <script>
+      // Handle all 404 redirects to hash-based routing
+      const path = window.location.pathname;
+      const hashPath = path.startsWith('/') ? path.substring(1) : path;
+      window.location.href = `/#/${hashPath}${window.location.search}${window.location.hash}`;
+    </script>
+  </head>
+  <body>
+    <p>Falls sie nicht weitergeleitet werden..., <a href="/">click here</a>.</p>
+  </body>
 </html>

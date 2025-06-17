@@ -11,20 +11,36 @@ import AgilityDetail from './pages/AgilityDetail';
 import './App.css';
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Handle hash routing for GitHub Pages compatibility
+    if (!window.location.hash && location.pathname !== '/') {
+      // Store the original path before converting to hash
+      sessionStorage.setItem('originalPath', location.pathname);
+      window.location.hash = location.pathname;
+    }
+
+    // Clean up sessionStorage when leaving the app
+    return () => {
+      sessionStorage.removeItem('originalPath');
+    };
+  }, [location]);
+
   return (
     <div className="app">
       <nav className="navbar">
         <div className="container">
           <div className="nav-links">
             <div className="left">
-              <NavLink to="/#/" className="nav-link" end>Home</NavLink>
+              <NavLink to="/" className="nav-link" end>Home</NavLink>
             </div>
             <div className="center">
-              <NavLink to="/#/dienstleistungen" className="nav-link">Dienstleistungen</NavLink>
-              <NavLink to="/#/agility" className="nav-link">Agility</NavLink>
-              <NavLink to="/#/preisliste" className="nav-link">Preisliste</NavLink>
-              <NavLink to="/#/partner" className="nav-link">Partner</NavLink>
-              <NavLink to="/#/kontakt" className="nav-link">Kontakt</NavLink>
+              <NavLink to="/dienstleistungen" className="nav-link">Dienstleistungen</NavLink>
+              <NavLink to="/agility" className="nav-link">Agility</NavLink>
+              <NavLink to="/preisliste" className="nav-link">Preisliste</NavLink>
+              <NavLink to="/partner" className="nav-link">Partner</NavLink>
+              <NavLink to="/kontakt" className="nav-link">Kontakt</NavLink>
             </div>
           </div>
         </div>
