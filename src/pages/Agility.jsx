@@ -24,7 +24,7 @@ export default function Agility() {
             <div className="service-card" key={service.id}>
               <h2>{service.title}</h2>
               <p>{service.description}</p>
-              <Link to={`/agility/${service.id}`} className="service-link">
+              <Link to={`/#/agility/${service.id}`} className="service-link">
                 Mehr Informationen
               </Link>
             </div>
